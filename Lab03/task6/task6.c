@@ -25,7 +25,7 @@ int main(void){
 
     printf("\nNew Array: ");
 
-    for (int i; i < 6; i++){
+    for (int i = 0; i < 6; i++){
         printf("%d ", arr[i]);
     }
     printf("\n");    
