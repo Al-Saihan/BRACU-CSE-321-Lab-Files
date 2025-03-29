@@ -4,7 +4,7 @@
 
 int main(void)
 {
-    int a, b;
+    pid_t a, b;
 
     a = fork();
 
