@@ -5,7 +5,7 @@
 int main(void)
 {
     pid_t a, b, c, d;
-    printf("Parent process ID: 0\n");
+    printf("Parent process ID: %d\n", getpid());
     a = fork();
 
     if (a < 0)
@@ -15,9 +15,6 @@ int main(void)
     else if (a == 0)
     {
         a = getpid();
-        // Edit here: Declare a new variable z above, remove parent process print
-        // add z = getppid(), print later down below
-
         b = fork();
         if (b < 0)
         {
