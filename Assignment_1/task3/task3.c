@@ -22,7 +22,6 @@ int main(void)
         write(temp, "+", 1);
         fork();
     }
-    printf("%d\n", getpid());
     sleep(2);
 
     if (p == getpid())
