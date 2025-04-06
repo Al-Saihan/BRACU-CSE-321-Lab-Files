@@ -7,7 +7,7 @@ int main(int argc, char *argv[])
 {
     char buffer[100] = "Random Text";
 
-    int file = open(strcat(argv[1], ".txt"), O_CREAT | O_WRONLY | O_TRUNC, 0666);
+    int file = open(strcat(argv[1], ".txt"), O_CREAT | O_RDWR | O_TRUNC, 0666);
 
     while (1)
     {
