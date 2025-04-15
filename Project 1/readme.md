@@ -6,9 +6,9 @@ This project was developed as part of **BRACU CSE321 (Operating Systems) Lab**.
 
 ## **Group Members**  
 We are grateful to have had an amazing team:  
-- **Al Saihan Tajvi** (23301219)  
-- **Farhan Zarif** (23301692)  
-- **Sadik Mina Dweep** (22101836)  
+- **Al Saihan Tajvi**  
+- **Farhan Zarif**
+- **Sadik Mina Dweep** 
 
 ## **Implemented Features**  
 
