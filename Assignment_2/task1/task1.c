@@ -27,20 +27,20 @@ void *fibonacci_search(void *nums)
 {
     int *array = (int *)nums;
 
-    int s;
+    int search_index;
 
     for (int i = 1; i < total_searches; i++)
     {
         printf("Enter Search %d: ", i);
-        scanf("%d", &s);
+        scanf("%d", &search_index);
         printf("Result of search #%d = ", i);
-        if ((s >= total_numbers) || (s < 0))
+        if ((search_index >= total_numbers) || (search_index < 0))
         {
             printf("-1\n");
         }
         else
         {
-            printf("%d\n", array[s]);
+            printf("%d\n", array[search_index]);
         }
     }
 }
@@ -49,11 +49,17 @@ int main(void)
 {
     pthread_t thread1, thread2;
 
-    printf("Enter the term of fibonacci sequence: \n");
-    scanf("%d", &total_numbers); //
+    do
+    {
+        printf("Enter the term of fibonacci sequence: ");
+        scanf("%d", &total_numbers);
+    } while (total_numbers < 0 || total_numbers > 40);
 
-    printf("How many numbers you are willing to search?: \n");
-    scanf("%d", &total_searches);
+    do
+    {
+        printf("How many numbers you are willing to search?: \n");
+        scanf("%d", &total_searches);
+    } while (total_searches < 0);
 
     total_numbers++;
     total_searches++;
