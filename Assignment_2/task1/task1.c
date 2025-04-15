@@ -7,6 +7,37 @@ int a = 0;
 int b = 1;
 int total_numbers, total_searches;
 
+void *fibonacci_sequence(void *nums);
+void *fibonacci_search(void *nums);
+
+int main(void)
+{
+    pthread_t thread1, thread2;
+
+    do
+    {
+        printf("Enter the term of fibonacci sequence: ");
+        scanf("%d", &total_numbers);
+    } while (total_numbers < 0 || total_numbers > 40);
+
+    do
+    {
+        printf("How many numbers you are willing to search?: \n");
+        scanf("%d", &total_searches);
+    } while (total_searches < 0);
+
+    total_numbers++;
+    total_searches++;
+
+    int *numbers = malloc(total_numbers * sizeof(int));
+
+    pthread_create(&thread1, NULL, fibonacci_sequence, (void *)numbers);
+    pthread_join(thread1, NULL);
+
+    pthread_create(&thread2, NULL, fibonacci_search, (void *)numbers);
+    pthread_join(thread2, NULL);
+}
+
 void *fibonacci_sequence(void *nums)
 {
     int *array = (int *)nums;
@@ -43,32 +74,4 @@ void *fibonacci_search(void *nums)
             printf("%d\n", array[search_index]);
         }
     }
-}
-
-int main(void)
-{
-    pthread_t thread1, thread2;
-
-    do
-    {
-        printf("Enter the term of fibonacci sequence: ");
-        scanf("%d", &total_numbers);
-    } while (total_numbers < 0 || total_numbers > 40);
-
-    do
-    {
-        printf("How many numbers you are willing to search?: \n");
-        scanf("%d", &total_searches);
-    } while (total_searches < 0);
-
-    total_numbers++;
-    total_searches++;
-
-    int *numbers = malloc(total_numbers * sizeof(int));
-
-    pthread_create(&thread1, NULL, fibonacci_sequence, (void *)numbers);
-    pthread_join(thread1, NULL);
-
-    pthread_create(&thread2, NULL, fibonacci_search, (void *)numbers);
-    pthread_join(thread2, NULL);
 }
