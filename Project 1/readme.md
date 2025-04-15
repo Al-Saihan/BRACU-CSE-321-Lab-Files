@@ -29,5 +29,5 @@ We are grateful to have had an amazing team:
 ---
 
 It was an incredible experience collaborating on this project. Below are their GitHub profiles for reference:  
-- **Farhan Zarif**: [https://github.com/zarif2042?fbclid=IwZXh0bgNhZW0CMTAAAR4hRw39dGF8HW2SRk5acEdkLN30ryruRy7fSSGYi4XQ6UZ3OYT8BhzTQcwR7Q_aem_TdW2s0q6NPpm5MnPkDbaYg](Click!) *(Replace with actual link)*  
-- **Sadik Mina Dweep**: [GitHub Link](TBA) *(Replace with actual link)*  
+- **Farhan Zarif**: [https://github.com/zarif2042?fbclid=IwZXh0bgNhZW0CMTAAAR4hRw39dGF8HW2SRk5acEdkLN30ryruRy7fSSGYi4XQ6UZ3OYT8BhzTQcwR7Q_aem_TdW2s0q6NPpm5MnPkDbaYg](Click!) 
+- **Sadik Mina Dweep**: [GitHub Link](TBA) 
