@@ -17,7 +17,7 @@ int main()
     char selection[100];
 
     int sm_id;
-    sm_id = shmget((key_t)1234, 1024, 0666 | IPC_CREAT);
+    sm_id = shmget((key_t)4145, 1024, 0666 | IPC_CREAT);
 
     if (sm_id == -1)
     {
@@ -42,12 +42,11 @@ int main()
     printf("2. Type w to Withdraw Money.\n");
     printf("3. Type c to Check Balance.\n\n");
 
-    read(0, selection, sizeof(selection));
-
+    fgets(selection, sizeof(selection), stdin);
     strcpy(bank->sel, selection);
     bank->b = 1000;
     printf("\nYour selection: %s\n", selection);
-    selection[2] = '\0';
+    bank->sel[2] = '\0';
 
     pid_t pid = fork();
 
