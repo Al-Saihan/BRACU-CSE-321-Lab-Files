@@ -115,6 +115,7 @@ int hasPermission(int userPerm, int requiredPerm)
 void checkACLAccess(ACLControlledResource *res, const char *userName, int perm)
 {
     // TODO
+    printf("ACL Check: User {%s} requests {%s} on {%s}: Access {%s}", *userName);
 }
 
 // Capability System
@@ -131,9 +132,21 @@ int main()
 
     // ACL Setup
     // TODO
+    ACLControlledResource aclResources[MAX_RESOURCES] =
+        {{"File1", {{"Alice", READ | WRITE}, {"Bob", READ}}, 2},
+
+         {"File2", {{"Bob", ALL_PERM}, {"Charlie", READ | EXECUTE}}, 2},
+
+         {"File3", {{"Alice", WRITE}, {"Charlie", READ}}, 2}};
 
     // Capability Setup
     // TODO
+    CapabilityUser capabilityUsers[MAX_USERS] =
+        {{{"Alice"}, {{"File1", READ | WRITE}, {"File3", WRITE}}, 2},
+
+         {{"Bob"}, {{"File1", READ}, {"File2", ALL_PERM}}, 2},
+
+         {{"Charlie"}, {{"File2", READ | EXECUTE}, {"File3", READ}}, 2}};
 
     // Test ACL
     // TODO
